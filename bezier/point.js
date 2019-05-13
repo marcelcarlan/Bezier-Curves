@@ -111,3 +111,9 @@ function drawBernsteinBezier( points) {
         }
     }
 }
+
+function splitPoint(point1, point2, k){
+    var newX = point1.x*(1-k) + point2.x*(1-(1-k))
+    var newY = point1.y*(1-k) + point2.y*(1-(1-k))
+    return new Point(newX,newY);
+}
