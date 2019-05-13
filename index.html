@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
-<body>
 
-<div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">3 Fixed Points</a>
-  <a href="#contact">3 Variable Points</a>
-  <a href="#about">Illustrator simulation</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+<body class="home">
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="3fixedpoints.html">3 Fixed Points</a>
+        <a href="3variablepoints.html">3 Variable Points</a>
+        <a href="npoints.html">N Variable Points</a>
+    
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+    <div class="titleMap">
+        <div class="titleContent">
+            <p class="title">Bézier curves</p>
+        </div>
+    </div>
 
+    <div class="content">
+        <h2>About</h2>
+        <p>A Bézier curve is a parametric curve related to the Bernstein polynomial. It is used in computer graphics and
+            related fields for computer fonts, illustrations and animations.</p>
+        <br>
+        <h2>History</h2>
+        <p>The curve is named after Pierre Bézier,a French engineer and one of the founders of the fields of solid,
+            geometric and physical modelling as well as in the field of representing curves, especially in CAD/CAM
+            systems. As an engineer at Renault, he became a leader in the transformation of design and manufacturing,
+            through mathematics and computing tools, into computer-aided design and three-dimensional modeling. He used
+            the curve for designing the bodywork of Renault cars</p>
+        <p>The mathematical basis for Bézier curves—the Bernstein polynomial—had been known since 1912, but the
+            polynomials were not applied to graphics until some 50 years later, when they were widely publicised by
+            Pierre Bézier. The study of these
+            curves was however first developed in 1959 by mathematician Paul de Casteljau using de Casteljau's
+            algorithm, a numerically stable method to evaluate Bézier curves at Citroën, another French automaker.</p>
+        <br>
+        <h2>Applications</h2>
+        <p>Bézier curves are widely used in computer graphics to model smooth curves hat can be scaled indefinitely.
+            "Paths", as they are commonly refered, are not bound by the limits of resterized images and are intuitive to
+            modify.</p>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.onbeforeunload = function () {
+                return 'Are you sure you want to leave?';
+            };
+        }
+    </script>
 </body>
+
 </html>
